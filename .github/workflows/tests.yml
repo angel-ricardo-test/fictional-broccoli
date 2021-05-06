@@ -11,12 +11,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          submodules: true
       - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ env.NODE_VERSION }}
-      - name: Update submodules
-        run: git submodule update --remote --recursive
+      - name: Init submodules
+        run: git submodule update --init --recursive
+      - name: Directory Debug
+        run: ls
+      - name: Directory Debug
+        run: cd user-credentials-ema && ls
       - name: Install Dependencies
         run: cd user-credentials-ema/app && npm install
       - name: Run Unit Tests and Integration Tests
