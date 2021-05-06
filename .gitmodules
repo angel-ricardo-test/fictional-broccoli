@@ -1,3 +1,6 @@
 [submodule "personal-budgets-ema"]
 	path = personal-budgets-ema
 	url = git@github.com:angel-ricardo-test/personal-budgets-ema.git
+[submodule "user-credentials-ema"]
+	path = user-credentials-ema
+	url = git@github.com:angel-ricardo-test/user-credentials-ema.git
