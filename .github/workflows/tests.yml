@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
       - name: Init submodules
-        run: git submodule update --init --recursive
+        run: git submodule update --init --recursive --remote
       - name: Directory Debug
         run: ls
       - name: Directory Debug
